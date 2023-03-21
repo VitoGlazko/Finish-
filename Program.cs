@@ -2,23 +2,23 @@
 //Написать программу, которая из имеющегося массива строк формирует массив из строк,
 //длина которвых меньше или равна 3 символам 
 
-Console.Clear(); 
+Console.Clear(); //Чистим консоль
 
-Console.Write("Введите сколько элементов будет в массиве: ");
+Console.Write("Введите сколько элементов будет в массиве: ");//Запрашиваем у пользователя сколько элементов будет в массиве
 
-int elementsCount = int.Parse(Console.ReadLine()!);
+int elementsCount = int.Parse(Console.ReadLine()!);//Вносим данные в переменную
 
-string[] set1 = new string[elementsCount];
+string[] set1 = new string[elementsCount];//Создаём массив размером elementsCount
 
-for (int i = 0; i < set1.Length; i++)
+for (int i = 0; i < set1.Length; i++)//Создаём цикл что бы заменить значение каждого элемента
 {
-    Console.WriteLine("Введите данные для массива: ");
-    set1[i] = Convert.ToString(Console.ReadLine()!);
+    Console.WriteLine("Введите данные для массива: "); //просим пользователя ввести данные для массива
+    set1[i] = Convert.ToString(Console.ReadLine()!);//меняем значение элементов массива на те что ввёл пользователь
 }
 
-string[] set2 = new string[set1.Length];
+string[] set2 = new string[set1.Length];//Создаём дополнительный пустой массив равный длине первого
 
-void SecondArrayWithIF(string[] set1, string[] set2)
+void SecondArrayWithIF(string[] set1, string[] set2)//Создаём функцию для отсеевания ненужных элементов массива 
 {
     int count = 0;
     for (int i = 0; i < set1.Length; i++)
@@ -31,7 +31,7 @@ void SecondArrayWithIF(string[] set1, string[] set2)
     }
 }
 
-void PrintArray(string[] array)
+void PrintArray(string[] array)//Создаём функцию для печати нового массива
 {
     for (int i = 0; i < array.Length; i++)
     {
